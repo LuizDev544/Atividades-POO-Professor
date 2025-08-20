@@ -16,6 +16,7 @@ public class CalcularFrete {
      * @param args argumentos de linha de comando (não usados aqui)
      */
     public static void main(String[] args) {
+        
         // Criação de diferentes cargas (objetos do tipo Carga)
         
         Carga c1 = new Carga(); // Nova carga
