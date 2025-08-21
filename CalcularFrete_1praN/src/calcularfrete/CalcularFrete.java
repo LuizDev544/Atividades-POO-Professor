@@ -19,23 +19,23 @@ public class CalcularFrete {
         
         // Criação de diferentes cargas (objetos do tipo Carga)
         
-        Carga c1 = new Carga(); // Nova carga
+        Endereco c1 = new Endereco(); // Nova carga
         c1.setDescricao("Pacote Pizza Combo 1"); // Descrição da carga
         c1.setMassa(5); // Peso em alguma unidade (ex: kg)
 
-        Carga c2 = new Carga();
+        Endereco c2 = new Endereco();
         c2.setDescricao("Pacote Esfirra Combo 1");
         c2.setMassa(10);
 
-        Carga c3 = new Carga();
+        Endereco c3 = new Endereco();
         c3.setDescricao("Pizza Muzzarela");
         c3.setMassa(1);
 
-        Carga c4 = new Carga();
+        Endereco c4 = new Endereco();
         c4.setDescricao("X-Salada");
         c4.setMassa(2);
 
-        Carga c5 = new Carga();
+        Endereco c5 = new Endereco();
         c5.setDescricao("Pastel Super Queijo");
         c5.setMassa(3);
 

@@ -36,5 +36,4 @@ public class Endereco {
     public void setNumero(String numero) {
         this.numero = numero;
     }
-    
 }

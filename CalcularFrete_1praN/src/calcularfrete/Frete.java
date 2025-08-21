@@ -3,6 +3,8 @@ package calcularfrete;
 import java.util.ArrayList;
 import java.util.List;
 
+import Setor.Endereco;
+
 /**
  * Classe Frete
  * Representa um frete contendo endereço de retirada, de entrega,
@@ -17,7 +19,7 @@ public class Frete {
     private Endereco endentrega;
 
     // Lista de cargas que fazem parte do frete
-    private List<Carga> listcarga = new ArrayList<>();
+    private List<Endereco> listcarga = new ArrayList<>();
 
     // Valor total do frete (calculado depois)
     private double valor;
@@ -29,28 +31,28 @@ public class Frete {
     private double distancia;
 
     // Setter para sobrescrever a lista de cargas inteira
-    public void setListCarga(List<Carga> listcarga){
+    public void setListCarga(List<Endereco> listcarga){
         this.listcarga = listcarga;
     }
     
     // Getter para obter a lista de cargas
-    public List<Carga> getListCarga(){
+    public List<Endereco> getListCarga(){
         return listcarga;
     }
     
     // Adiciona uma carga à lista
-    public void addListCarga(Carga carga){
+    public void addListCarga(Endereco carga){
         listcarga.add(carga);
     }
 
     // Remove uma carga da lista
-    public void removeListaCarga(Carga carga){
+    public void removeListaCarga(Endereco carga){
         listcarga.remove(carga);
     }
     
     // Exibe no console todas as cargas do frete
     public void exibirListCarga(){   
-        for(Carga c : listcarga){
+        for(Endereco c : listcarga){
             System.out.println("\nDescricao...: " + c.getDescricao());
             System.out.println("Massa...: " + c.getMassa());
         }        
@@ -101,7 +103,7 @@ public class Frete {
     public void calcularValorFrete(){
         double s = 0;
         // Soma a massa de todas as cargas
-        for(Carga c : listcarga){
+        for(Endereco c : listcarga){
             s += c.getMassa();
         }
         // Valor final = distância * soma das massas
