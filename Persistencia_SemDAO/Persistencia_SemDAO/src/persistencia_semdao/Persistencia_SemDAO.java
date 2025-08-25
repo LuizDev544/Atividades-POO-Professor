@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author PTOLEDO
+ * @author Luiz
  */
 public class Persistencia_SemDAO {
 
@@ -17,7 +17,7 @@ public class Persistencia_SemDAO {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         Produto p = new Produto();
         p.setDescricao("Monitor 43");
         p.setPreco(1700);
@@ -43,17 +43,12 @@ public class Persistencia_SemDAO {
             System.out.println("Erro: " + ex.getMessage());
         }
 
-        p.setId(6);
-        p.setDescricao("Monitor 50");
-        p.setPreco(3000);     
         try {
             p.atualizar();
             System.out.println("Atualizado com sucesso.");
         } catch (SQLException | ClassNotFoundException ex) {
             System.out.println("Erro: " + ex.getMessage());
         }
-
-        p.setId(3);
 
         try {
             p = p.consultarById();
